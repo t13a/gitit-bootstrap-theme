@@ -22,7 +22,7 @@ function extract() {
     fi
 }
 
-cd src
+cd "$(dirname "${BASH_SOURCE[0]}")"
 
 JQUERY_VERSION="${JQUERY_VERSION:-3.3.1}"
 JQUERY_JS_URL="${JQUERY_JS_URL:-https://code.jquery.com/jquery-${JQUERY_VERSION}.min.js}"
