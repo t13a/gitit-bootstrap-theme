@@ -1,0 +1,100 @@
+/* Background */
+body {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Interface font */
+body,
+#content form,
+#content .breadcrumb,
+#content .card,
+#content #list,
+#content #categoryList {
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* Document font */
+#content {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+}
+
+/* Emphasis font */
+#content strong {
+  font-weight: 600;
+}
+
+/* Monospace font */
+#content code,
+#content kbd,
+#content pre,
+#content samp,
+#content textarea,
+#content var {
+  font-family: "Noto Sans Mono", monospace;
+}
+
+/* Heading */
+#content h1:not(.pageTitle),
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+  border-bottom: 1px solid rgb(0, 0, 0, 0.125);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+}
+
+/* Code */
+#content code,
+#content kbd,
+#content pre,
+#content samp,
+#content var {
+  background-color: rgba(0, 0, 0, 0.0625);
+  border-radius: 0.25rem;
+  padding: 0 0.25rem;
+}
+
+/* Code (in block) */
+#content pre code,
+#content pre kbd,
+#content pre pre,
+#content pre samp,
+#content pre var {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* Logo */
+#logo img {
+  width: 100%;
+  max-width: 12rem;
+  max-height: 12rem;
+}
+
+/* Logo (in navigation bar) */
+#logo-navbar img {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* User name */
+#logoutlink span.badge {
+  max-width:50%;
+  white-space: nowrap;
+  overflow:hidden !important;
+  text-overflow: ellipsis;
+}
+
+/* Revision */
+#maincol h2.revision {
+  font-size:1rem;
+  font-weight:normal;
+}
