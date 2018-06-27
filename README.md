@@ -45,13 +45,13 @@ Currently in heavy development.
 -  ~~Delete page~~
 -  History
 -  Discuss
--  Register
+-  ~~Register~~
 -  ~~Login~~
--  Login failure
+-  ~~Login failure~~
 -  ~~Directory index~~
 -  ~~Category index~~
 -  Recent activity by all users
 -  Recent activity by specific user
--  Upload a file
+-  ~~Upload a file~~
 -  Search result by "Search Wiki"
 -  Search result by "Go to page"
