@@ -12,7 +12,7 @@ Some scripts or stylesheets are derived from the original one.
 
 ## Screenshots
 
-| Feature | Original Theme | [Gitit Bootstrap Theme](https://github.com/t13a/gitit-bootstrap-theme) |
+| Feature | Original Theme | Bootstrap |
 |---|:---:|:---:|
 | Desktop Home | ![Screenshot](doc/img/screenshot-desktop-home-original.png) | ![Screenshot](doc/img/screenshot-desktop-home.png) |
 | Edit Preview | ![Screenshot](doc/img/screenshot-desktop-edit-preview-original.png) | ![Screenshot](doc/img/screenshot-desktop-edit-preview.png) |
@@ -26,9 +26,9 @@ Some scripts or stylesheets are derived from the original one.
     $ mv static{,.bak}
     $ mv templates{,.bak}
     $ git clone https://github.com/t13a/gitit-bootstrap-theme
-    $ gitit-bootstrap-theme/src/build.sh
+    $ gitit-bootstrap-theme/build.sh
     ...
-    $ cp -r gitit-bootstrap-theme/src/{static,templates} .
+    $ cp -r gitit-bootstrap-theme/out/{static,templates} .
 
 Then restart Gitit.
 
