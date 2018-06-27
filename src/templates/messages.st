@@ -1,3 +1,3 @@
-<ul class="messages">
-  $messages:listitem()$
+<ul class="messages alert alert-danger list-unstyled">
+$messages:listitem()$
 </ul>

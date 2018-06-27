@@ -1,3 +1,3 @@
-<div class="markupHelp">
-  $markuphelp$
+<div id="markuphelp">
+$markuphelp$
 </div>
