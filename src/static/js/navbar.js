@@ -1,16 +1,8 @@
-// Hide uninitialized element
-$('<style>')
-    .attr('type', 'text/css')
-    .html('#navbar-body-tabs { display.none; }')
-    .appendTo('head');
-
-// Initialize all
 $(document).ready(function() {
-    // Initialize tabs
     $('#navbar-body-tabs')
+        .addClass('order-first')
         .each(function() {
             $(this).find('ul')
-                .addClass('order-first')
                 .addClass('nav')
                 .addClass('nav-pills')
                 .addClass('flex-column')
@@ -51,6 +43,5 @@ $(document).ready(function() {
                 .addClass('bg-secondary');
             $(this).find('ul li:not(.selected) a')
                 .addClass('text-secondary');
-        })
-        .css('display', 'block');
+        });
 });

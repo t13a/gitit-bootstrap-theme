@@ -32,16 +32,16 @@
       <div class="row">
         <div id="maincol" class="col-lg-9 order-lg-last p-0 p-lg-3 clearfix">
           <div id="navbar" class="navbar navbar-expand-lg navbar-light p-lg-0">
-            <a id="logo-navbar" class="navbar-brand d-lg-none" href="/">
+            <a id="logo-navbar" class="navbar-brand d-lg-none" href="$base$/">
               <img alt="" src="$base$/img/logo.svg" />
-              <span class="d-none">$wikititle$</span>
+              <span class="sr-only">$wikititle$</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-body" aria-controls="navbar-body" aria-expanded="false" aria-label="Toggle navigation" style="">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar-body" class="collapse navbar-collapse">
-              <form class="order-last form-lg-inline form-group ml-auto my-3 my-lg-0" action="/_search" method="get">
-                <div class="input-group">
+            <div id="navbar-body" class="collapse navbar-collapse small">
+              <form class="order-last form-lg-inline form-group my-3 my-lg-0" action="$base$/_search" method="get">
+                <div class="input-group input-group-sm">
                   <input class="form-control" placeholder="Search $wikititle$" type="text" name="patterns" />
                   <div class="input-group-append">
                     <button class="input-group-text" type="submit" name="search">
@@ -51,6 +51,7 @@
                   </div>
                 </div>
               </form>
+$userbox()$
               <div id="navbar-body-tabs">
 $tabs$
               </div>
@@ -58,12 +59,11 @@ $tabs$
           </div>
 $content()$
         </div>
-        <div id="sidebar" class="col-lg-3 order-lg-first mb-3 pr-lg-0">
+        <div id="sidebar" class="col-lg-3 order-lg-first mb-3 pr-lg-0 small">
 $logo()$
 $if(markuphelp)$
 $markuphelp()$
 $endif$
-$userbox()$
 $if(sitenav)$
 $sitenav()$
 $endif$

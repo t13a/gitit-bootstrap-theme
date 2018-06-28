@@ -2,9 +2,10 @@
 /* <![CDATA[ */
   \$.get("$base$/_user", {}, function(username, status) {
      if (username != "") {
-        \$("#loginlink").parent().addClass("d-none");
-        \$("#logoutlink").parent().removeClass("d-none");
+        \$("#logoutlink").parent().parent().show();
         \$("#logged_in_user").text(username);
+     } else {
+        \$("#loginlink").parent().parent().show();
      };
    });
 /* ]]> */

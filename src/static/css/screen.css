@@ -1,7 +1,7 @@
 #logo img {
   width: 100%;
-  max-width: 12rem;
-  max-height: 12rem;
+  max-width: 10rem;
+  max-height: 10rem;
 }
 
 #logo-navbar img {
@@ -18,15 +18,31 @@
 
 #maincol h2.revision {
   font-size:1rem;
-  font-weight:normal;
+}
+
+#maincol h2.revision code {
+  color: inherit;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow:hidden !important;
+  text-overflow: ellipsis;
+}
+
+#navbar ul.userbox span.nav-link {
+  background: transparent !important;
+  white-space: nowrap;
+}
+
+#sidebar .list-group-item {
+  padding: 0.5rem 0.75rem;
 }
 
 /* fix sidebar width in large screen */
 @media (min-width: 992px) {
   #maincol {
     width: inherit;
-    min-width: calc(100% - 18rem);
-    max-width: calc(100% - 18rem);
+    min-width: calc(100% - 12.5rem);
+    max-width: calc(100% - 12.5rem);
   }
 
   #maincol .tabs li {
@@ -35,7 +51,7 @@
 
   #sidebar {
     width: inherit;
-    min-width: 18rem;
-    max-width: 18rem;
+    min-width: 12.5rem;
+    max-width: 12.5rem;
   }
 }

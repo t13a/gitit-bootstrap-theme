@@ -1,17 +1,18 @@
 $(document).ready(function() {
     var path = window.location.pathname;
 
-    // Category list
     $('#categoryList')
         .each(function() {
             $(this).find('ul')
-                .addClass('list-inline');
+                .addClass('list-inline')
+                .addClass('mt-3');
             $(this).find('ul li')
-                .addClass('list-inline-item');
+                .addClass('list-inline-item')
+                .addClass('mr-1');
             $(this).find('ul li a')
                 .addClass('badge')
                 .addClass('badge-primary')
-                .addClass('mt-3')
+                .addClass('mt-1')
                 .addClass('p-2')
                 .html(function() {
                     return '<i class="fa fa-tag fa-fw mr-2"></i>' +
@@ -20,7 +21,6 @@ $(document).ready(function() {
         })
         .css('display', 'block');
 
-    // Login form
     $('#loginForm')
         .addClass('jumbotron')
         .each(function() {
@@ -59,7 +59,6 @@ $(document).ready(function() {
                 .remove();
         });
 
-    // Reset password form
     $('#resetPassword')
         .addClass('jumbotron')
         .each(function() {
@@ -77,7 +76,6 @@ $(document).ready(function() {
                 .remove();
         });
 
-    // Edit form
     $('#editform')
         .addClass('form-group')
         .each(function() {
@@ -105,7 +103,7 @@ $(document).ready(function() {
             return $(this).html().replace(/&nbsp;/g, '');
         });
 
-    // Delete form
+    // delete form
     $('#content > form > input[name="filetodelete"]').parent()
         .addClass('jumbotron')
         .each(function() {
@@ -123,46 +121,69 @@ $(document).ready(function() {
                 .addClass('mt-3');
         });
 
-    // Path specific contents
+    // path specific
     if (path == '/') {
-        // Home
+        // do nothing
     } else if (path.match(/^\/_activity(\/.*)?$/g)) {
-        // Recent activity
+        $('#content h1.pageTitle + h1')
+            .replaceWith(function() {
+                return '<div class="h4">' + $(this).text() + '</div>';
+            });
         $('#content ul')
             .addClass('list-unstyled')
+            .addClass('list-group');
+        $('#content ul li')
+            .addClass('list-group-item')
             .each(function() {
-                $(this).find('li')
-                    .addClass('card')
-                    .addClass('card-body')
-                    .addClass('mt-3')
-                    .each(function() {
-                        $(this).find('span.date')
-                            .addClass('text-muted');
-                        $(this).find('span.author a')
-                            .prepend('<i class="fa fa-user fa-fw"></i>');
-                        $(this).find('span.files a')
-                            .prepend('<i class="fa fa-file fa-fw"></i>');
-                    });
-            });
+                $(this)
+                    .append($('<span class="head"></span>')
+                        .append($(this).children('span.date'))
+                        .append($(this).children('span.author')))
+                    .append($('<span class="body"></span>')
+                        .append($(this).children('span.subject'))
+                        .append($(this).children('span.files')));
+                $(this).find('span.head')
+                    .addClass('d-flex')
+                    .addClass('justify-content-between')
+                    .addClass('align-items-center');
+                $(this).find('span.head span.author')
+                    .addClass('order-first')
+                $(this).find('span.head span.date')
+                    .addClass('order-last')
+                    .addClass('ml-3')
+                    .addClass('small')
+                    .addClass('text-muted');
+                $(this).find('span.head span.author a')
+                    .addClass('text-secondary')
+                    .prepend('<i class="fa fa-user fa-fw"></i>');
+            })
+            .contents()
+            .filter(function() { return this.nodeType != 1; })
+            .remove();
+        $('#content ul li span.files')
+            .addClass('d-block');
+        $('#content ul li span.files a')
+            .addClass('badge')
+            .addClass('badge-primary')
+            .addClass('mt-1')
+            .addClass('p-2')
+            .prepend('<i class="fa fa-exchange-alt fa-fw mr-2"></i>');
     } else if (path == '/_categories') {
-        // Categories
         $('#content > ul')
-            .addClass('list-inline')        
+            .addClass('list-inline')
+            .addClass('mt-3')
             .each(function() {
                 $(this).find('li')
-                    .addClass('list-inline-item');
+                    .addClass('list-inline-item')
+                    .addClass('mr-1');
                 $(this).find('li a')
                     .addClass('badge')
                     .addClass('badge-primary')
-                    .addClass('mt-3')
+                    .addClass('mt-1')
                     .addClass('p-2')
-                    .html(function() {
-                        return '<i class="fa fa-tag fa-fw mr-2"></i>' +
-                            '<span>' + $(this).html() + '</span>';
-                    });
+                    .prepend('<i class="fa fa-tag fa-fw mr-2"></i>');
             });
     } else if (path.match(/^\/_category\/.+/g)) {
-        // Category
         $('#content > ul')
             .addClass('list-group')
             .each(function() {
@@ -184,25 +205,96 @@ $(document).ready(function() {
             .text(function() {
                 return $(this).text().substring(1);
             });
+    } else if (path.match(/^\/_diff(\/.*)?$/g)) {
+        $('#content h1.pageTitle + h2.revision')
+            .replaceWith(function() {
+                return '<div class="h4">' + $(this).text() + '</div>';
+            });
+        $('#content pre')
+            .addClass('card')
+            .addClass('card-header')
+            .addClass('p-2')
+            .addClass('bg-light')
+            .addClass('text-muted');
+        $('#content pre span.added')
+            .addClass('text-success')
+            .addClass('font-weight-bold');
+        $('#content pre span.deleted')
+            .addClass('text-danger')
+            .addClass('font-weight-bold');
     } else if (path.match(/^\/_history(\/.*)?$/g)) {
-        // History
         $('#content ul')
             .addClass('list-unstyled')
+            .addClass('list-group');
+        $('#content ul li')
+            .addClass('list-group-item')
+            .addClass('w-100')
             .each(function() {
-                $(this).find('li')
-                    .addClass('card')
-                    .addClass('card-body')
-                    .addClass('mt-3')
-                    .each(function() {
-                        $(this).find('span.date')
-                            .addClass('text-muted');
-                        $(this).find('span.author a')
-                            .addClass('card-title')
-                            .prepend('<i class="fa fa-user fa-fw"></i>');
-                    });
+                $(this)
+                    .append($('<span class="head"></span>')
+                        .append($(this).children('span.date'))
+                        .append($(this).children('span.author')))
+                    .append($('<span class="body"></span>')
+                        .append($(this).children('a')))
+                $(this).find('span.head')
+                    .addClass('d-flex')
+                    .addClass('justify-content-between')
+                    .addClass('align-items-center');
+                $(this).find('span.head span.author')
+                    .addClass('order-first')
+                $(this).find('span.head span.date')
+                    .addClass('order-last')
+                    .addClass('ml-3')
+                    .addClass('small')
+                    .addClass('text-muted');
+                $(this).find('span.head span.author a')
+                    .addClass('text-secondary')
+                    .prepend('<i class="fa fa-user fa-fw"></i>');
+            })
+            .contents()
+            .filter(function() { return this.nodeType != 1; })
+            .remove();
+    } else if (path.match(/^\/(_search|_go)(\/.*)?$/g)) {
+        $('#content h1.pageTitle + h3')
+            .replaceWith(function() {
+                return '<div class="h4">' + $(this).html() + '</div>';
             });
+        $('#content ol')
+            .addClass('list-unstyled')
+            .addClass('list-group');
+        $('#content ol li')
+            .addClass('list-group-item')
+            .addClass('p-0')
+            .each(function() {
+                var matchingLines = $(this)
+                    .contents()
+                    .filter(function() { return this.nodeType != 1; })
+                    .text()
+                    .replace(/[^0-9]+/g, '');
+                $(this)
+                    .append($('<span class="head d-flex justify-content-between align-items-center px-3 py-2"></span>')
+                        .append($('<span></span>')
+                            .addClass('d-flex')
+                            .addClass('align-items-center')
+                            .append($('<i class="chevron fa fa-chevron-down fa-fw mr-3"></i>'))
+                            .append($(this).children('a:not(.showmatch)')
+                                .prepend('<i class="fa fa-book fa-fw mr-2"></i>')))
+                        .append($('<span class="badge badge-primary" title="' + matchingLines + ' matching lines">' + matchingLines + '</span>')))
+                    .append($(this).children('pre.matches')
+                        .addClass('border-top')
+                        .addClass('m-0')
+                        .addClass('px-3')
+                        .addClass('py-2')
+                        .addClass('bg-light')
+                        .addClass('text-muted')
+                        .css('background', 'transparent')
+                        .css('border', 'none'));
+                $(this)
+            })
+            .contents()
+            .filter(function() { return this.nodeType != 1; })
+            .remove();
     } else if (path.match(/^\/_upload(\/.*)?$/g)) {
-        // Upload
         $('#content form')
             .addClass('jumbotron')
             .each(function() {
@@ -238,7 +330,6 @@ $(document).ready(function() {
                 return $(this).html().replace(/&nbsp;/g, '');
             });
     } else if (path.match(/^\/(_index|.*\/)$/g)) {
-        // Index
         $('#content h1').after(
             $('<div id="breadcrumb" class="breadcrumb"></div>')
                 .append($('#content > a.updir'))

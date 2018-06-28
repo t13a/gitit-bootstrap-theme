@@ -26,27 +26,13 @@ body,
 /* Document font */
 #content,
 #previewpane {
-  font-family: "Noto Serif", serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 300;
-  line-height: 1.6rem;
-  text-align: justify;
-  text-justify: auto;
 }
 
 /* Emphasis font */
 #content strong {
   font-weight: 600;
-}
-
-/* Hidden title */
-#logo span,
-#logo-navbar span {
-  color: rgb(0, 0, 0);
-  display: inline !important;
-  font-family: "Noto Serif", serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-decoration: none !important;
 }
 
 /* External link icon */

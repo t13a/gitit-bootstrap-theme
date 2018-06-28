@@ -1,18 +1,11 @@
-// Hide uninitialized element
-$('<style>')
-    .attr('type', 'text/css')
-    .html('#markuphelp, #exportbox { display.none; }')
-    .appendTo('head');
-
 $(document).ready(function() {
-    // Initialize markup help
     $('#markuphelp')
         .addClass('card')
         .addClass('mt-3')
         .each(function() {
             $(this).find('pre')
                 .addClass('card-header')
-                .addClass('p-3')
+                .addClass('p-2')
                 .addClass('bg-secondary')
                 .addClass('text-white');
             $(this).find('p')
@@ -20,10 +13,10 @@ $(document).ready(function() {
                 .addClass('m-0');
         });
 
-    // Initialize export box
     $('#exportbox')
         .addClass('form-group')
         .addClass('input-group')
+        .addClass('input-group-sm')
         .addClass('mt-3')
         .addClass('mb-0')
         .each(function() {

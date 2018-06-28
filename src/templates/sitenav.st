@@ -15,7 +15,7 @@
     <a class="list-group-item list-group-item-action" href="$base$/Help"><i class="fa fa-question fa-fw mr-2"></i>Help</a>
   </div>
   <form class="form-group mt-3 mb-0" action="$base$/_go" method="post" id="goform">
-    <div class="input-group">
+    <div class="input-group input-group-sm">
       <input class="form-control" placeholder="Go to page" type="text" name="gotopage" />
       <div class="input-group-append">
         <button class="input-group-text" type="submit" name="go">
