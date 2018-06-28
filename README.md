@@ -39,19 +39,17 @@ Currently in heavy development.
 -  ~~View page~~
 -  ~~View page (Printable version)~~
 -  ~~View page (Revision)~~
--  View page (Diff)
+-  ~~Diff page~~
 -  ~~Edit page~~
 -  ~~Preview page~~
 -  ~~Delete page~~
--  History
--  Discuss
+-  ~~History~~
+-  ~~Discuss~~
 -  ~~Register~~
 -  ~~Login~~
 -  ~~Login failure~~
 -  ~~Directory index~~
 -  ~~Category index~~
--  Recent activity by all users
--  Recent activity by specific user
+-  ~~Recent activity~~
 -  ~~Upload a file~~
--  Search result by "Search Wiki"
--  Search result by "Go to page"
+-  ~~Search result~~
