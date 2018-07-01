@@ -31,6 +31,7 @@ This is just a theme not extension. But some features differ from original.
 ## Install
 
     $ cd path/to/your-gitit-dir
+    $ mv cache{,.bak} # if needed
     $ mv static{,.bak}
     $ mv templates{,.bak}
     $ git clone https://github.com/t13a/gitit-bootstrap-theme
@@ -38,4 +39,4 @@ This is just a theme not extension. But some features differ from original.
     ...
     $ cp -r gitit-bootstrap-theme/out/{static,templates} .
 
-Then restart Gitit.
+Then start Gitit.
