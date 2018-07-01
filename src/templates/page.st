@@ -13,7 +13,7 @@
     <link href="$base$/css/print.css" rel="stylesheet" media="all" type= "text/css" />
     $else$
     <link href="$base$/css/bootstrap.min.css" rel="stylesheet" media="screen, projection" type="text/css" />
-    <link href="$base$/fontawesome/css/all.css" rel="stylesheet" media="screen, projection" type="text/css" />
+    <link href="$base$/css/all.css" rel="stylesheet" media="screen, projection" type="text/css" />
     <link href="$base$/css/custom.css" rel="stylesheet" media="screen, projection" type="text/css" />
     <link href="$base$/css/print.css" rel="stylesheet" media="print" type= "text/css" />
     <script type="text/javascript" src="$base$/js/jquery.min.js"></script>
