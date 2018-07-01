@@ -1,10 +1,6 @@
 # Gitit Bootstrap Theme
 
-<p style="text-align:center">
-  <a href="doc/img/screenshot.png">
-    <img alt="Screenshot" src="doc/img/screenshot.png"/>
-  </a>
-</p>
+![Screenshot](doc/img/screenshot.png)
 
 Bootstrap theme for [Gitit](https://github.com/jgm/gitit/).  Using following components.
 
@@ -24,11 +20,11 @@ This is just a theme not extension. But some features differ from original.
 
 ## Screenshots
 
-![Edit preview](doc/img/screenshot-edit-preview.png)
-![Index](doc/img/screenshot-index.png)
-![Search](doc/img/screenshot-search.png)
-![Mobile](doc/img/screenshot-mobile.png)
-![Mobile (Expanded)](doc/img/screenshot-mobile-expanded.png)
+![Screenshot (Edit preview)](doc/img/screenshot-edit-preview.png)
+![Screenshot (Index)](doc/img/screenshot-index.png)
+![Screenshot (Search)](doc/img/screenshot-search.png)
+![Screenshot (Home - Mobile)](doc/img/screenshot-home-mobile.png)
+![Screenshot (Home - Mobile - Expanded)](doc/img/screenshot-home-mobile-expanded.png)
 
 ## Install
 
