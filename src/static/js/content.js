@@ -279,7 +279,7 @@ $(document).ready(function() {
                             .append($('<i class="chevron fa fa-chevron-down fa-fw mr-3"></i>'))
                             .append($(this).children('a:not(.showmatch)')
                                 .prepend('<i class="fa fa-book fa-fw mr-2"></i>')))
-                        .append($('<span class="badge badge-primary" title="' + matchingLines + ' matching lines">' + matchingLines + '</span>')))
+                        .append($('<span class="badge badge-info" title="' + matchingLines + ' matching lines">' + matchingLines + '</span>')))
                     .append($(this).children('pre.matches')
                         .addClass('border-top')
                         .addClass('m-0')

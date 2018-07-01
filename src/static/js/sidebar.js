@@ -6,8 +6,8 @@ $(document).ready(function() {
             $(this).find('pre')
                 .addClass('card-header')
                 .addClass('p-2')
-                .addClass('bg-secondary')
-                .addClass('text-white');
+                .addClass('bg-light')
+                .addClass('text-secondary');
             $(this).find('p')
                 .addClass('card-body')
                 .addClass('m-0');
