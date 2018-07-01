@@ -6,7 +6,7 @@ Bootstrap theme for [Gitit](https://github.com/jgm/gitit/).  Using following com
 
 -  Scripts and stylesheets from [Gitit 1.12.2.1](https://github.com/jgm/gitit/), [Bootstrap 4.1.1](https://getbootstrap.com/), [jQuery 3.3.1](https://jquery.com/), [jQuery UI 1.12.1](https://jqueryui.com/).
 -  Icons from [Fontawesome 5.1.0](https://fontawesome.com/).
--  New default logo from [Wiki Commons](https://commons.wikimedia.org/wiki/File:Lambda_lc.svg).
+-  Images from [Wiki Commons](https://commons.wikimedia.org/wiki/File:Lambda_lc.svg).
 
 Some scripts or stylesheets are derived from the original one.
 
@@ -14,12 +14,14 @@ Some scripts or stylesheets are derived from the original one.
 
 This is just a theme not extension. But some features differ from original.
 
--  Foldable table of contents
--  External link icon
--  Edit preview in modal dialog
+- Edit preview in modal dialog
+- External link icon
+- Foldable table of contents
+- New default logo in SVG format
 
 ## Screenshots
 
+![Screenshot (Home)](doc/img/screenshot-home.png)
 ![Screenshot (Edit preview)](doc/img/screenshot-edit-preview.png)
 ![Screenshot (Index)](doc/img/screenshot-index.png)
 ![Screenshot (Search)](doc/img/screenshot-search.png)
