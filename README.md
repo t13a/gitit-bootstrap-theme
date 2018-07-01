@@ -1,24 +1,34 @@
 # Gitit Bootstrap Theme
 
-Typical but sleek Bootstrap theme for [Gitit](https://github.com/gjm/gitit/).
-Depends on following components.
+<p style="text-align:center">
+  <a href="doc/img/screenshot.png">
+    <img alt="Screenshot" src="doc/img/screenshot.png"/>
+  </a>
+</p>
 
--  JavaScript from [jQuery 3.3.1](https://jquery.com/).
--  JavaScript & Stylesheet from [Bootstrap 4.1.1](https://getbootstrap.com/).
+Bootstrap theme for [Gitit](https://github.com/jgm/gitit/).  Using following components.
+
+-  Scripts and stylesheets from [Gitit 1.12.2.1](https://github.com/jgm/gitit/), [Bootstrap 4.1.1](https://getbootstrap.com/), [jQuery 3.3.1](https://jquery.com/), [jQuery UI 1.12.1](https://jqueryui.com/).
 -  Icons from [Fontawesome 5.1.0](https://fontawesome.com/).
--  Default logo from [Wiki Commons](https://commons.wikimedia.org/wiki/File:Lambda_lc.svg).
+-  New default logo from [Wiki Commons](https://commons.wikimedia.org/wiki/File:Lambda_lc.svg).
 
 Some scripts or stylesheets are derived from the original one.
 
+## Differences from original
+
+This is just a theme not extension. But some features differ from original.
+
+-  Foldable table of contents
+-  External link icon
+-  Edit preview in modal dialog
+
 ## Screenshots
 
-| Feature | Original Theme | Bootstrap |
-|---|:---:|:---:|
-| Desktop Home | ![Screenshot](doc/img/screenshot-desktop-home-original.png) | ![Screenshot](doc/img/screenshot-desktop-home.png) |
-| Edit Preview | ![Screenshot](doc/img/screenshot-desktop-edit-preview-original.png) | ![Screenshot](doc/img/screenshot-desktop-edit-preview.png) |
-| Index | ![Screenshot](doc/img/screenshot-desktop-index-original.png) | ![Screenshot](doc/img/screenshot-desktop-index.png) |
-| Mobile Home (Top) | ![Screenshot](doc/img/screenshot-mobile-home-original.png) | ![Screenshot](doc/img/screenshot-mobile-home.png) |
-| Mobile Home (Bottom) | ![Screenshot](doc/img/screenshot-mobile-home-bottom-original.png) | ![Screenshot](doc/img/screenshot-mobile-home-bottom.png) |
+![Edit preview](doc/img/screenshot-edit-preview.png)
+![Index](doc/img/screenshot-index.png)
+![Search](doc/img/screenshot-search.png)
+![Mobile](doc/img/screenshot-mobile.png)
+![Mobile (Expanded)](doc/img/screenshot-mobile-expanded.png)
 
 ## Install
 
@@ -31,25 +41,3 @@ Some scripts or stylesheets are derived from the original one.
     $ cp -r gitit-bootstrap-theme/out/{static,templates} .
 
 Then restart Gitit.
-
-## Status
-
-Currently in heavy development.
-
--  ~~View page~~
--  ~~View page (Printable version)~~
--  ~~View page (Revision)~~
--  ~~Diff page~~
--  ~~Edit page~~
--  ~~Preview page~~
--  ~~Delete page~~
--  ~~History~~
--  ~~Discuss~~
--  ~~Register~~
--  ~~Login~~
--  ~~Login failure~~
--  ~~Directory index~~
--  ~~Category index~~
--  ~~Recent activity~~
--  ~~Upload a file~~
--  ~~Search result~~
