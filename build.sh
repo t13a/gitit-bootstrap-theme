@@ -72,7 +72,8 @@ FONTAWESOME_ZIP="out/$(basename "${FONTAWESOME_ZIP_URL}")"
 FONTAWESOME_DIR="${FONTAWESOME_ZIP%.zip}"
 download "${FONTAWESOME_ZIP_URL}" "${FONTAWESOME_ZIP}"
 extract "${FONTAWESOME_ZIP}" "${FONTAWESOME_DIR}"
-copy ${FONTAWESOME_DIR}/fontawesome-free-${FONTAWESOME_VERSION}-web/css/all.css out/static/css/all.css
+copy ${FONTAWESOME_DIR}/fontawesome-free-${FONTAWESOME_VERSION}-web/css/all.css out/static/css/fontawesome.css
+copy ${FONTAWESOME_DIR}/fontawesome-free-${FONTAWESOME_VERSION}-web/css/all.css out/static/css/solid.css
 copy ${FONTAWESOME_DIR}/fontawesome-free-${FONTAWESOME_VERSION}-web/webfonts out/static/webfonts
 
 info "Done"

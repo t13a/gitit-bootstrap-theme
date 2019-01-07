@@ -1,8 +1,5 @@
-@import url("bootstrap.min.css");
-@import url("fontawesome.css");
-@import url("solid.css");
-@import url("screen.css");
-@import url("hk-pyg.css");
+@import url("screen.css"); /* default gitit screen styles */
+@import url("highlighting.css"); /* for syntax highlighting */
 
 /* Put your custom style modifications here: */
 
