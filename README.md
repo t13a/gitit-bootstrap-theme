@@ -51,3 +51,7 @@ Since Gitit 0.12.3, the syntax highlight library has been replaced with [skyligh
     $ cp -r gitit-bootstrap-theme/out/{static,templates} .
 
 Then start Gitit.
+
+## Run in Docker container
+
+See [Gitit Experimental](https://github.com/t13a/dockerfile-gitit-experimental).
