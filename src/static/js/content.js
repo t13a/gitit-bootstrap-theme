@@ -364,5 +364,19 @@ $(document).ready(function() {
                     .css('text-transform', 'capitalize')
                     .prepend('<i class="fa fa-trash fa-fw mr-2"></i>');
             });
+    } else {
+        // page title to bread comb
+        if (path.match(/^\/[^_]/g) && path.slice(1) == $('#content h1:first').text()) {
+            var segments = path.slice(1).split('/');
+            $('#content h1:first').html(function() {
+                var ret = '';
+                for (var i = 0; i < segments.length - 1; i++) {
+                    var href = '/' + segments.slice(0, i + 1).join('/') + '/';
+                    var text = segments[i];
+                    ret += '<a class="text-muted" href="' + href + '">' + text + '</a>/';
+                }
+                return ret + segments[segments.length - 1];
+            });
+        }
     }
 });
