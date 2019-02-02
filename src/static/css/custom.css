@@ -84,6 +84,11 @@ body,
 }
 
 /* Table */
+#content table {
+  margin: 1rem 0;
+}
+
+/* Table cell */
 #content td,
 #content th {
   padding: 0.125rem 0.25rem;
