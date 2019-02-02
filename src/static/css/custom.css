@@ -61,6 +61,13 @@ body,
   padding-bottom: 0.25rem;
 }
 
+/* Blockquote */
+#content blockquote {
+  border-left: 0.25rem solid rgb(0, 0, 0, 0.125);
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
 /* Code */
 #content code,
 #content kbd,
