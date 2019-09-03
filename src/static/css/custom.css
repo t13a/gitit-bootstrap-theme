@@ -16,14 +16,14 @@ body,
 #content .breadcrumb,
 #content .card,
 #content .list-group {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif, emoji;
   font-weight: 400;
 }
 
 /* Document font */
 #content,
 #previewpane {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif, emoji;
   font-weight: 300;
 }
 
@@ -45,7 +45,7 @@ body,
 #content samp,
 #content textarea,
 #content var {
-  font-family: "Noto Sans Mono", monospace;
+  font-family: "Noto Sans Mono", monospace, emoji;
 }
 
 /* Heading */
